@@ -1,2 +1,2 @@
-# local-chat-app-js
-local chat application using local storage
+# local-chat-app-js-2024
+Local Chat Application Using HTML, CSS, JavaScript

@@ -1,0 +1,363 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+
+#login,
+#signup {
+    display: block;
+    margin: 20px auto;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#login h2,
+#signup h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#loginForm,
+#signupForm {
+    margin-bottom: 20px;
+}
+
+#loginUsername,
+#loginPassword,
+#signupUsername,
+#signupPassword {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#loginForm input[type="submit"],
+#signupForm input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+#loginForm input[type="submit"]:hover,
+#signupForm input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#login button,#signup button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+input[type="password"],
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+
+#chatbox input[type="text"]{
+    margin-bottom: 0;
+}
+
+input[type="submit"]{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    margin-bottom: 10px;
+}
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#login,
+#signup {
+    display: block;
+}
+
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+    clear: both;
+    overflow-wrap: break-word; 
+}
+
+.sender-message {
+    background-color: #DCF8C6;
+    float: right;
+}
+
+.receiver-message {
+    background-color: #E5E5EA;
+    float: left;
+}
+
+.message-text {
+    margin-top: 5px;
+    word-wrap: break-word; 
+}
+
+.message-sender,
+.message-receiver {
+    font-size: 0.8em;
+    color: #777;
+}
+
+.message-timestamp {
+    font-size: 0.7em;
+    color: #999;
+    margin-top: 5px;
+    text-align: right;
+}
+
+
+
+
+/* chatsection layout............. */
+
+#chatsection {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#currentuser {
+    grid-column: 1/2;
+    padding: 20px 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    font-size: xx-large;
+    flex-wrap: wrap;
+    
+}
+#currentuser div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#currentuser img {
+    width: 50px;
+    height: 50px;
+    margin: 0px 10px;
+    border-radius: 50%;
+}
+#currentuser img.x {
+    width: 15px;
+    height: 15px;
+    margin: 0px 10px;
+    border-radius: 50%;
+}
+
+
+
+#search-bar {
+    border-radius: 0;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+#allusercon {
+    grid-column: 1/2;
+    min-height: calc(100vh - 92px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    /* border-radius: 4px; */
+    background-color: #f9f9f9;
+    max-height: 208px; 
+    overflow-y: auto; 
+    border: 1px solid #ccc;
+
+}
+
+#alluser div {
+    display: flex;
+    padding: 10px 5px;
+    align-items: center;
+    position: relative;
+}
+
+#alluser  img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+#alluser  img.y {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+}
+
+.initialdisplay {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+ }
+
+.initialdisplay h1{
+    margin-top: 20px;
+
+}
+
+
+#chatbox .greeting img{
+    height: 100px;
+    width: 100px;
+    margin: 10px auto;
+}
+
+#chatbox {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    background-color: #f9f9f9;
+    position: relative;
+    border: 1px solid #ccc;
+
+
+}
+
+#chatingwith {
+    background-color: rgb(130, 204, 130);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    font-size: x-large;
+}
+
+#chatingwith img {
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+}
+
+.chat-input-form {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.chat-input {
+    flex: 1; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button.send-button {
+    padding: 10px 20px;
+    margin: 0px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+#chatMessages {
+    padding: 5px;
+    max-height: calc(100vh - 138px);
+    overflow-y: auto;
+    
+}
+.highlight{
+    background-color: gray;
+    border-radius: 10px;
+}
+  
+@media screen and (max-width: 809px) {
+    #chatsection {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+   
+    #allusercon{
+        min-height: calc(100vh - 136px);
+    }
+  
+
+
+    #currentuser {
+    justify-content: center;
+        
+    }
+    #currentuser button{
+        margin-top: 10px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    #login,
+    #signup {
+        max-width: 300px;
+    }
+}

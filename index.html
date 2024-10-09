@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body onload="checkLoginStatus()">
+    <div id="login" style="display: block">
+      <h2>login</h2>
+      <form id="loginForm" onsubmit="login(event)">
+        <input type="text" id="loginUsername" placeholder="Username" required />
+        <input
+          type="password"
+          id="loginPassword"
+          placeholder="Password"
+          required
+        />
+        <input type="submit" value="Login" />
+      </form>
+      <button onclick="showSignup()">sign up</button>
+    </div>
+
+    <div id="signup" style="display: none">
+      <h2>Signup</h2>
+      <form id="signupForm" onsubmit="signup(event)">
+        <input
+          type="text"
+          id="signupUsername"
+          placeholder="Username"
+          required
+        />
+        <input
+          type="password"
+          id="signupPassword"
+          placeholder="Password"
+          required
+        />
+        <input type="submit" value="Signup" />
+      </form>
+      <button onclick="showLogin()">Back to Login</button>
+    </div>
+
+    <div id="chatsection" style="display: none">
+      <div id="currentuser">
+      </div>
+
+      <div id="chatbox">
+        <div id="chatingwith">
+          
+        </div>
+
+        <div id="chatMessages">
+          
+        </div>
+
+        <form
+          id="formid"
+          class="chat-input-form"
+          onsubmit="sendMessage(event)"
+          style="display: none"
+        >
+          <input
+            type="text"
+            class="chat-input"
+            id="chatInput"
+            required
+            placeholder="Type here..."
+          />
+          <button type="submit" class="button send-button">Send</button>
+        </form>
+      </div>
+      <div id="allusercon">
+        <form id="myForm">
+            <input type="text" name="myTextInput" id="search-bar" placeholder="Enter text here...">
+        </form>
+        <div id="alluser">
+
+        </div>
+      </div>
+
+     
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
